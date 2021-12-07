@@ -1,9 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+enum nodeType
+{
+	operator;
+	integer;
+};
+
 struct node
 {
+	enum nodeType type;
 	int val;
+	char operator;
 	struct node *next;
 };
 
