@@ -168,7 +168,7 @@ void evaluate(struct node* head)
 			break;
 				
 			case '/':
-				operand2->number == 0 ? 1 : operand2->number;
+				operand2->number = operand2->number == 0 ? 1 : operand2->number;
 				operand1->number = operand1->number / operand2->number;
 			break;
 		}
@@ -181,7 +181,7 @@ void evaluate(struct node* head)
 	}
 	
 	// evaluate all dash operations
-		for( struct node* operatorNode = findFirstDashOperator(head);
+	for( struct node* operatorNode = findFirstDashOperator(head);
 			operatorNode != NULL;
 			operatorNode = findFirstDashOperator(head) )
 	{
